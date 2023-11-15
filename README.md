@@ -1,10 +1,14 @@
 # Field AI interface for legged perceptive Control
 
 
-## Getting Started
-### Dependency
+## Dependency
 
-#### OCS2 and its dependency
+### OCS2
+```
+# Clone OCS2
+git clone git@github.com:SFakoorian0111/ocs2.git
+```
+#### Dependency
 ```
 # Clone pinocchio
 git clone --recurse-submodules https://github.com/leggedrobotics/pinocchio.git
@@ -14,17 +18,15 @@ git clone --recurse-submodules https://github.com/leggedrobotics/hpp-fcl.git
 git clone https://github.com/leggedrobotics/ocs2_robotic_assets.git
 # Install dependencies
 sudo apt install liburdfdom-dev liboctomap-dev libassimp-dev
-
-# Clone OCS2
-git clone git@github.com:SFakoorian0111/ocs2.git
 ```
-
-#### legged_control
+### elevation_map
 ```
-# Clone legged_control
-git clone git@github.com:SFakoorian0111/legged_control.git
+# Clone elevation mapping
+git clone git@github.com:ANYbotics/elevation_mapping.git
+# Clone elevation mapping cupy
+git clone git@github.com:leggedrobotics/elevation_mapping_cupy.git
 ```
-#### elevation_map and its dependencies
+#### Dependency
 ```
 # Clone grid map
 git clone git@github.com:ANYbotics/grid_map.git
@@ -34,17 +36,19 @@ git clone git@github.com:ANYbotics/kindr.git
 git clone git@github.com:ANYbotics/kindr_ros.git
 # Clone message logger
 git clone git@github.com:ANYbotics/message_logger.git
-# Clone elevation mapping
-git clone git@github.com:ANYbotics/elevation_mapping.git
-# Clone elevation mapping cupy
-git clone git@github.com:leggedrobotics/elevation_mapping_cupy.git
-# Clone realsense_gazebo_plugin
+# Clone realsense_gazebo_plugin (Note: for simulation only)
 git clone git@github.com:pal-robotics/realsense_gazebo_plugin.git
 #[realsense2_description](https://github.com/IntelRealSense/realsense-ros/tree/ros2-development/realsense2_description)
 sudo apt-get install ros-$ROS_DISTRO-realsense2-description
 ```
-#### legged_control_perceptive
+
+### legged_control
+```
+# Clone legged_control
+git clone git@github.com:qiayuanl/legged_control.git
+```
+### legged_control_perceptive
 ```
 # Clone legged_control_perceptive
-git@github.com:qiayuanl/legged_perceptive.git
+git clone git@github.com:qiayuanl/legged_perceptive.git
 ```

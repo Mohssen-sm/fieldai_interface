@@ -9,7 +9,7 @@ windows:
         - roslaunch legged_controllers load_controller.launch cheater:=false
       - shell_command:
         - sleep 10
-        - cd src/scripts
+        - cd src/fieldai_interface/scripts
         - bash legged_controller.sh
       - shell_command:
         - sleep 11

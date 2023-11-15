@@ -51,10 +51,10 @@ CTRL-C to quit
 moveBindings = {
         'w':(1,0,0,0),
         's':(-1,0,0,-0),
-        'a':(0,-1,0,0),
-        'd':(0,1,0,0),
-        'g':(0,0,0,-1),
-        'h':(0,0,0,1),
+        'd':(0,-1,0,0),
+        'a':(0,1,0,0),
+        'h':(0,0,0,-1),
+        'g':(0,0,0,1),
     }
 
 speedBindings={
@@ -194,8 +194,8 @@ if __name__=="__main__":
 
     rospy.init_node('teleop_twist_keyboard')
 
-    speed = rospy.get_param("~speed", 0.5)
-    turn = rospy.get_param("~turn", 1.0)
+    speed = rospy.get_param("~speed", 0.35)
+    turn = rospy.get_param("~turn", 0.5)
     speed_limit = rospy.get_param("~speed_limit", 1)
     turn_limit = rospy.get_param("~turn_limit", 0.8)
     repeat = rospy.get_param("~repeat_rate", 0.0)

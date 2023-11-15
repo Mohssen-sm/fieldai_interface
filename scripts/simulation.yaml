@@ -3,20 +3,25 @@ windows:
   - layout: tiled
     panes:
       - shell_command:
-        - roslaunch fieldai_legged_perceptive_description gazebo_world.launch wname:=stairs gui:=true
+        - roslaunch fieldai_legged_perceptive_description gazebo_world.launch wname:=stepping_stone gui:=true
       - shell_command:
         - sleep 5
         - roslaunch fieldai_legged_perceptive_controllers load_controller.launch
       - shell_command:
         - sleep 8
-        - cd src/fieldai_interface/scripts
-        - bash perceptive_controller.sh
+        - rosrun fieldai_legged_perceptive_controllers controller_client_node controllers/perceptive_controller start
+        # - cd src/fieldai_interface/scripts
+        # - bash perceptive_controller.sh
       - shell_command:
         - sleep 10
-        - roslaunch fieldai_legged_perceptive_controllers elevation_mapping.launch rviz:=true   
+        - roslaunch fieldai_legged_perceptive_controllers elevation_mapping.launch rviz:=true
       - shell_command:
         - sleep 12
         - rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/alien2/alien_driver/cmd_vel
+      # - shell_command:
+      #   - sleep 13
+      #   - cd bagfiles
+      #   - rosbag record /convex_plane_decomposition_ros/planar_terrain /elevation_mapping/elevation_map /foot_placement /legged_robot/currentState /legged_robot/desiredBaseTrajectory /legged_robot/desiredFeetTrajectory/LF /legged_robot/desiredFeetTrajectory/LH /legged_robot/desiredFeetTrajectory/RF /legged_robot/desiredFeetTrajectory/RH /legged_robot/optimizedStateTrajectory /tf /tf_static  
     shell_command_before:
       - cd ~/ocs2_ws/
       - source devel/setup.bash 
