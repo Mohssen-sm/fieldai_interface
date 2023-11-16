@@ -6,7 +6,7 @@
 ### OCS2
 ```
 # Clone OCS2
-git clone git@github.com:SFakoorian0111/ocs2.git
+git clone git@github.com:Mohssen-sm/ocs2.git
 ```
 #### Dependency
 ```

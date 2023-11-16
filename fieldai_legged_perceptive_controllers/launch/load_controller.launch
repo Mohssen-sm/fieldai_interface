@@ -15,7 +15,7 @@
           controllers/perceptive_controller
 "/>
 
-    <node pkg="ocs2_legged_robot_ros" type="legged_robot_gait_command" name="legged_robot_gait_command"
+    <node pkg="fieldai_legged_perceptive_controllers" type="gait_command_node" name="gait_command_node"
           output="screen"/>
 
     <node pkg="fieldai_legged_perceptive_controllers" type="CmdPublisher" name="CmdPublisher"

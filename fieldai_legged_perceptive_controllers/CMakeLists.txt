@@ -36,9 +36,17 @@ include_directories(
 link_directories(
         ${pinocchio_LIBRARY_DIRS}
 )
+
+# Add your source files here
+file(GLOB_RECURSE SRC_LIST
+    "src/GaitPublisher.cpp"
+)
 # Add the executable
 add_executable(controller_client_node src/controller_client_node.cpp)
 target_link_libraries(controller_client_node ${catkin_LIBRARIES})
+
+add_executable(gait_command_node src/GaitCommandNode.cpp ${SRC_LIST})
+target_link_libraries(gait_command_node ${catkin_LIBRARIES})
 
 # Target trajectories publish node
 add_executable(CmdPublisher
