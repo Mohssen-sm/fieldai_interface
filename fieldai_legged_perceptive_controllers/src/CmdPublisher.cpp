@@ -1,6 +1,5 @@
 
 #include "CmdPublisher.h"
-#include "GaitPublisher.h"
 
 #include <ocs2_core/Types.h>
 #include <ocs2_core/misc/LoadData.h>

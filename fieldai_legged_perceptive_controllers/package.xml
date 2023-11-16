@@ -15,6 +15,7 @@
     <depend>legged_perceptive_interface</depend>
     <depend>legged_controllers</depend>
     <depend>grid_map_ros</depend>
+    <depend>ocs2_legged_robot_ros</depend>
 
     <export>
         <controller_interface plugin="${prefix}/legged_perceptive_controllers_plugins.xml"/>
